@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import * as dotenv from 'dotenv';
 import moment from 'moment';
-import { Query, UserDetails, Week, ContributionDay, ResponseOfApi } from 'src/interfaces/interface';
+import { Query, UserDetails, Week, ContributionDay, ResponseOfApi } from './interfaces/interface';
 
 dotenv.config();
 

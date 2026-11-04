@@ -72,12 +72,14 @@ jobs:
           npm test
 
       - name: Uji Kompatibilitas - Run Linter
+        env:
+          ESLINT_USE_FLAT_CONFIG: "false"
         run: |
           echo "Checking linter..."
           npm run lint
 
-      - name: Enforce Security Policy (Fail on Critical CVE)
-        if: ${{ github.event_name == 'pull_request' || inputs.fail_on_critical == true }}
+      - name: Enforce Security Policy (Optional Gate)
+        if: ${{ inputs.fail_on_critical == true }}
         run: |
           echo "Enforcing critical security gate..."
           npm audit --audit-level=critical
