@@ -1,4 +1,4 @@
-import { Colors } from 'src/interfaces/interface';
+import { Colors } from '../interfaces/interface';
 
 export const selectColors = (queryString: string): Colors => {
     switch (queryString) {

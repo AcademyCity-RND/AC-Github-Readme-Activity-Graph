@@ -4,6 +4,7 @@
         "module": "commonjs",
         "lib": ["dom", "es6", "es2017", "esnext.asynciterable"],
         "sourceMap": true,
+        "rootDir": "./src",
         "outDir": "./dist",
         "moduleResolution": "node",
         "removeComments": true,
@@ -20,10 +21,8 @@
         "esModuleInterop": true,
         "emitDecoratorMetadata": true,
         "experimentalDecorators": true,
-        "resolveJsonModule": true,
-        "baseUrl": ".",
-        "types": ["jest"]
+        "resolveJsonModule": true
     },
-    "exclude": ["./node_modules/"],
-    "include": ["./src/", "__tests__"]
+    "exclude": ["node_modules", "dist", "__test__"],
+    "include": ["./src/**/*"]
 }

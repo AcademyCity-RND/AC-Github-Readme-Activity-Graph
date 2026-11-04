@@ -10,7 +10,11 @@
         "build": "tsc",
         "start": "node dist/main.js",
         "lint": "eslint \"{src,styles,types,interfaces,__test__}/**/*.ts\" --fix",
-        "format": "prettier --write \"src/**/*.ts\" \"__test__/**/*.ts\" \"interfaces/**/*.ts\" \"styles/**/*.ts\" \"types/**/*.ts\""
+        "format": "prettier --write \"src/**/*.ts\" \"__test__/**/*.ts\" \"interfaces/**/*.ts\" \"styles/**/*.ts\" \"types/**/*.ts\"",
+        "audit:check": "npm audit",
+        "audit:fix": "npm audit fix",
+        "deps:check": "npm outdated",
+        "deps:report": "node .github/scripts/audit-summary.cjs audit.json outdated.json"
     },
     "repository": {
         "type": "git",
