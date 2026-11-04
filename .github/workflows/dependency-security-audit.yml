@@ -47,7 +47,7 @@ jobs:
       - name: Create Test Environment File
         run: |
           touch .env
-          echo "TOKEN=${{ secrets.TOKEN }}" >> .env
+          echo "TOKEN=${{ secrets.TOKEN || secrets.GITHUB_TOKEN }}" >> .env
 
       - name: Check Outdated Dependencies
         run: |

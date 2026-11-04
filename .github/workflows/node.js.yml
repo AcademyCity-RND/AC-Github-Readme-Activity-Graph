@@ -20,7 +20,7 @@ jobs:
             - name: create env file
               run: |
                   touch .env
-                  echo TOKEN=${{ secrets.TOKEN }} >> .env
+                  echo "TOKEN=${{ secrets.TOKEN || secrets.GITHUB_TOKEN }}" >> .env
             - name: Use Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v4
               with:
